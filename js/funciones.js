@@ -138,13 +138,13 @@ function agregar_datos(){
 	var datos = $("#frm_registrar").serialize();
 	$.ajax({
 		method:"post",
-		url:"/final24/php/insertar_cliente.php",
+		url:"/templo-sistema/php/insertar_cliente.php",
 		data: datos,
 		success: function(e){
 
 				if (e==1) {
 					M.toast({html: 'Procesando...', completeCallback: function(){M.toast({html: "Se ha Registrado con Exito!  <img src='/final24/images/iconmonstr-check-mark-14.svg'> ",classes:' green darken-1 ' })}})
-					$("#tabla_registro").load ('/final24/personas1.php');
+					$("#tabla_registro").load ('/templo-sistema/personas1.php');
 				}else{
 					alert("El Registro ya existe");
 				}
@@ -161,7 +161,7 @@ function actulizar_datos(){
 	var datos = $("#frm_actualizar").serialize();
 		$. ajax({
 		method:"post",
-		url:"/final24/php/modificar_cliente.php",
+		url:"/templo-sistema/php/modificar_cliente.php",
 		data: datos,
 		success: function(e){
 
@@ -169,7 +169,7 @@ function actulizar_datos(){
 					M.toast({html: 'Procesando..', completeCallback: function(){M.toast({html: "Registro Actualizado!  <img src='/final24/images/iconmonstr-check-mark-14.svg'>",classes:' green darken-1 '})}})
 
 
-					$("#tabla_registro").load ('/final24/personas1.php');
+					$("#tabla_registro").load ('/templo-sistema/personas1.php');
 
 				}else{
 					alert("Ups Hubo un Problema en la Actualizacion Intentelo otra vez");
@@ -188,7 +188,7 @@ function eliminar_datos(){
 	var datos = $("#eliminar_modal").serialize();
 		$. ajax({
 		method:"post",
-		url:"/final24/php/eliminar_cliente.php",
+		url:"/templo-sistema/php/eliminar_cliente.php",
 		data: datos,
 		success: function(e){
 
@@ -196,7 +196,7 @@ function eliminar_datos(){
 				if (e==1) {
 					M.toast({html:"Eliminado..."});
 
-					$("#tabla_registro").load ('/final24/personas1.php');
+					$("#tabla_registro").load ('/templo-sistema/personas1.php');
 
 				}else{
 					alert("Ups, Hubo un Problema en Eliminar este registro, esto es debido a que se encuentra ocupado en la reservacion");
@@ -215,7 +215,7 @@ function eliminar_event(){
 	var datos = $("#eliminar_eventos").serialize();
 		$. ajax({
 		method:"post",
-		url:"/final24/php/eliminar_evento.php",
+		url:"/templo-sistema/php/eliminar_evento.php",
 		data: datos,
 		success: function(e){
 
@@ -223,7 +223,7 @@ function eliminar_event(){
 				if (e==1) {
 					M.toast({html:"Eliminado..."});
 
-					$("#tabla_registro").load ('/final24/evento.php');
+					$("#tabla_registro").load ('/templo-sistema/evento.php');
 
 				}else{
 					alert("Ups, Hubo un Problema en Eliminar esta reserva");
@@ -240,13 +240,13 @@ function agregar_evento(){
 	var datos = $("#frm_evento").serialize();
 	$.ajax({
 		method:"post",
-		url:"/final24/php/insertar_evento.php",
+		url:"/templo-sistema/php/insertar_evento.php",
 		data: datos,
 		success: function(e){
 
 				if (e==1) {
 					 M.toast({html: 'Procesando..', completeCallback: function(){M.toast({html:"Se ha Registrado con Exito ! <img src='/final24/images/iconmonstr-check-mark-14.svg'> ",classes:' green darken-1 ' })}})
-					$("#tabla_registro").load ('/final24/evento.php');
+					$("#tabla_registro").load ('/templo-sistema/evento.php');
 				}else{
 					alert("No se ha podido registrar");
 				}
@@ -263,13 +263,13 @@ function actulizar_evento(){
 	var datos = $("#frm_actualizar_evento").serialize();
 		$. ajax({
 		method:"post",
-		url:"/final24/php/modificar_evento.php",
+		url:"/templo-sistema/php/modificar_evento.php",
 		data: datos,
 		success: function(e){
 
 				if (e==1) {
 					M.toast({html: 'Procesando..', completeCallback: function(){M.toast({html: "Evento Actualizado!  <img src='/final24/images/iconmonstr-check-mark-14.svg'> ",classes:' green darken-1 ' })}})
-					$("#tabla_registro").load ('/final24/evento.php');
+					$("#tabla_registro").load ('/templo-sistema/evento.php');
 
 				}else{
 					alert("Ups Hubo un Problema en la Actualizacion Intentelo otra vez");
@@ -288,14 +288,14 @@ function agregar_datos_reserva(){
 	var datos = $("#frm_registrarr").serialize();
 	$.ajax({
 		method:"post",
-		url:"/final24/php/inser-reserva.php",
+		url:"/templo-sistema/php/inser-reserva.php",
 		data: datos,
 		success: function(e){
 
 				if (e==1) {
 					M.toast({html: 'Procesando..', completeCallback: function(){M.toast({html: "Se ha Registrado con Exito!  <img src='/final24/images/iconmonstr-check-mark-14.svg'> ",classes:' green darken-1 '})}})
 
-					$("#tabla_registro").load ('/final24/reservacion1.php');
+					$("#tabla_registro").load ('/templo-sistema/reservacion1.php');
 				}else{
 					alert("Ups, Hubo un Problema en la Reservacion Intentelo otra vez");
 				}
@@ -312,7 +312,7 @@ function eliminar_reservas(){
 	var datos = $("#eliminar_reserva").serialize();
 		$. ajax({
 		method:"post",
-		url:"/final24/php/eliminar_reserva.php",
+		url:"/templo-sistema/php/eliminar_reserva.php",
 		data: datos,
 		success: function(e){
 
@@ -320,7 +320,7 @@ function eliminar_reservas(){
 				if (e==1) {
 					M.toast({html:"Eliminado..."});
 
-					$("#tabla_registro").load ('/final24/reservacion1.php');
+					$("#tabla_registro").load ('/templo-sistema/reservacion1.php');
 
 				}else{
 					alert("Ups, Hubo un Problema en Eliminar esta reserva");
@@ -337,13 +337,13 @@ function agregar_visita(){
 	var datos = $("#frm_asist").serialize();
 	$.ajax({
 		method:"post",
-		url:"/final24/php/inser-visitas.php",
+		url:"/templo-sistema/php/inser-visitas.php",
 		data: datos,
 		success: function(e){
 
 				if (e==1) {
 					 M.toast({html: 'Procesando...', completeCallback: function(){M.toast({html: "Se ha Registrado su visita !  <img src='/final24/images/iconmonstr-check-mark-14.svg'> ",classes:' green darken-1 '})}})
-					$("#tabla_registro").load ('/final24/visitas.php');
+					$("#tabla_registro").load ('/templo-sistema/visitas.php');
 				}else{
 					alert("Ups, hubo un problema ");
 				}
@@ -360,7 +360,7 @@ function eliminar_visita(){
 	var datos = $("#eliminar_visitas").serialize();
 		$. ajax({
 		method:"post",
-		url:"/final24/php/eliminar_visitasS.php",
+		url:"/templo-sistema/php/eliminar_visitasS.php",
 		data: datos,
 		success: function(e){
 
@@ -368,7 +368,7 @@ function eliminar_visita(){
 				if (e==1) {
 					M.toast({html:"Eliminado..."});
 
-					$("#tabla_registro").load ('/final24/visitas.php');
+					$("#tabla_registro").load ('/templo-sistema/visitas.php');
 
 				}else{
 					alert("Ups, Hubo un problema al eliminar este registro");
@@ -386,13 +386,13 @@ function agregar_usuario(){
 	var datos = $("#frm_usuario").serialize();
 	$.ajax({
 		method:"post",
-		url:"/final24/php/insertar_usuari.php",
+		url:"/templo-sistema/php/insertar_usuari.php",
 		data: datos,
 		success: function(e){
 
 				if (e==1) {
 					 M.toast({html: 'Procesando', completeCallback: function(){M.toast({html: "Se ha Registrado con Exito!  <img src='/final24/images/iconmonstr-check-mark-14.svg'> ",classes:' green darken-1 '})}})
-					$("#tabla_registro").load ('/final24/usuarios.php');
+					$("#tabla_registro").load ('/templo-sistema/usuarios.php');
 				}else{
 					alert("Ups, no hubo un problema");
 				}
@@ -409,7 +409,7 @@ function actualizar_usuario(){
 	var datos = $("#frm_actualizar_usuario").serialize();
 		$. ajax({
 		method:"post",
-		url:"/final24/php/modificar_usuario.php",
+		url:"/templo-sistema/php/modificar_usuario.php",
 		data: datos,
 		success: function(e){
 
@@ -418,7 +418,7 @@ function actualizar_usuario(){
 					M.toast({html: 'Procesando', completeCallback: function(){M.toast({html: "Usuario Actualizado <img src='/final24/images/iconmonstr-check-mark-14.svg'> ",classes:' green darken-1 '})}})
 
 
-					$("#tabla_registro").load ('/final24/usuarios.php');
+					$("#tabla_registro").load ('/templo-sistema/usuarios.php');
 
 				}else{
 					alert("Ups Hubo un Problema en la Actualizacion Intentelo otra vez");
@@ -434,7 +434,7 @@ function eliminar_usuarios(){
 	var datos = $("#eliminar_usuario").serialize();
 		$. ajax({
 		method:"post",
-		url:"/final24/php/eliminar_usuario.php",
+		url:"/templo-sistema/php/eliminar_usuario.php",
 		data: datos,
 		success: function(e){
 
@@ -442,7 +442,7 @@ function eliminar_usuarios(){
 				if (e==1) {
 					M.toast({html:"Eliminado..."});
 
-					$("#tabla_registro").load ('/final24/usuarios.php');
+					$("#tabla_registro").load ('/templo-sistema/usuarios.php');
 
 				}else{
 					alert("Ups, Hubo un problema al eliminar este registro");

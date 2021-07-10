@@ -253,7 +253,7 @@
 		<script>
 			
     $('#Tablasss').DataTable({
-
+		"lengthMenu": [[5, 10, 25, -1], [5, 10, 25, "All"]],
  "responsive": true,
 			"order": [[1, "asc"]],
 				"language":{
